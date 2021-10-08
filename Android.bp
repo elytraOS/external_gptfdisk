@@ -83,7 +83,10 @@ cc_library_static {
     host_supported: true,
 
     export_include_dirs: ["."],
-    srcs: lib_common_srcs + ["diskio-unix.cc"],
+    srcs: lib_common_srcs + [
+        "diskio-unix.cc",
+        "sgdisk.cc",
+    ],
 
     shared_libs: ["libext2_uuid"],
     recovery_available: true,
